@@ -1,0 +1,11 @@
+services:
+  backend:
+    container_name: node-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:4040"
+    volumes:
+      - .:/app
+      - /app/node_modules
